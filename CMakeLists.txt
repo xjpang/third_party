@@ -118,8 +118,6 @@ ExternalProject_Add(grpc-repo
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
   TEST_COMMAND ""
-  CMAKE_CACHE_ARGS
-    -DCMAKE_CXX_STANDARD:STRING=${TRITON_MIN_CXX_STANDARD}
   PATCH_COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/tools/install_src.py --src <SOURCE_DIR> ${INSTALL_SRC_DEST_ARG} --dest-basename=grpc_1.48.0
 )
 #
