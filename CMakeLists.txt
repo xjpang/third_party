@@ -66,7 +66,7 @@ endif()
 
 # Some libs are installed to ${TRITON_THIRD_PARTY_INSTALL_PREFIX}/{LIB}/lib64 instead
 # of ${TRITON_THIRD_PARTY_INSTALL_PREFIX}/{LIB}/lib on Centos
-set (LIB_DIR "lib")
+set (LIB_DIR "lib64")
 # /etc/os-release does not exist on Windows
 if(EXISTS "/etc/os-release")
   file(STRINGS /etc/os-release DISTRO REGEX "^NAME=")
@@ -290,8 +290,8 @@ ExternalProject_Add(grpc
 #
 ExternalProject_Add(libevent
   PREFIX libevent
-  GIT_REPOSITORY "https://github.com/libevent/libevent.git"
-  GIT_TAG "release-2.1.8-stable"
+  GIT_REPOSITORY "https://github.com/xjpang/libevent.git"
+  GIT_TAG "release-2.1.8-jimpang"
   SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/libevent/src/libevent"
   EXCLUDE_FROM_ALL ON
   CMAKE_CACHE_ARGS
