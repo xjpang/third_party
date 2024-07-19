@@ -510,6 +510,7 @@ ExternalProject_Add(aws-sdk-cpp
 #
 if (NOT WIN32)
   set(PROTO_LIB_PATH "${TRITON_THIRD_PARTY_INSTALL_PREFIX}/protobuf/${LIB_DIR}/libprotobuf.a")
+  message("PROTO_LIB_PATH=${PROTO_LIB_PATH}")
   ExternalProject_Add(opentelemetry-cpp
     PREFIX opentelemetry-cpp
     GIT_REPOSITORY "https://github.com/open-telemetry/opentelemetry-cpp.git"
